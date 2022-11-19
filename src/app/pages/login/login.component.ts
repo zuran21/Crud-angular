@@ -41,7 +41,7 @@ export class LoginComponent implements OnInit {
           if(this.loginService.getUseRol() == 'administrador'){
             this.router.navigate(['/moduloAdmin']);
           }else if(this.loginService.getUseRol() == 'Cliente'){
-          this.router.navigate(["listarCLientes"]);
+          this.router.navigate(["/listarClientes"]);
         }
         })
       

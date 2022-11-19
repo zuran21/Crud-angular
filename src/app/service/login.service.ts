@@ -7,10 +7,10 @@ import urlbase from './helper';
 })
 export class LoginService {
 
-  constructor(private http: HttpClient) { }
+  constructor(private httpClient: HttpClient ) { }
 
     public generarToken(datalogin:any){
-      return this.http.post(`${urlbase}/autenticacion/generartoken`,datalogin);
+      return this.httpClient.post(`${urlbase}/autenticacion/generartoken`,datalogin);
     }
 
   public loginuser (token:any){
@@ -19,10 +19,13 @@ export class LoginService {
   }
   
   public getCurrentUser(){
-    return this.http.get(`${urlbase}/autenticacion/userloggin`,{
-      headers: new HttpHeaders ({'Authorization': 'Bearer' + localStorage.getItem('token')})
+    return this.httpClient.get(`${urlbase}/autenticacion/userloggin`,{
+      headers: new HttpHeaders ({'Authorization': 'Bearer ' + localStorage.getItem('token')})
     }
     );
+  }
+  public gettoken() {
+    localStorage.getItem('token')
   }
 
   public setuser(user:any){
