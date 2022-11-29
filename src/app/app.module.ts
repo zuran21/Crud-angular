@@ -20,6 +20,13 @@ import { HomeComponent } from './pages/home/home.component';
 import {MatIconModule} from '@angular/material/icon';
 import { ListarclientesComponent } from './pages/listarclientes/listarclientes.component';
 import { ModuloadministrativoComponent } from './pages/moduloadministrativo/moduloadministrativo.component';
+import { InvitadosComponent } from './pages/invitados/invitados.component';
+import { SlidebarComponent } from './pages/admin/slidebar/slidebar.component';
+import {MatListModule} from '@angular/material/list';
+import { BienvenidoComponent } from './pages/admin/bienvenido/bienvenido.component';
+import { DashboardComponent } from './pages/admin/dashboard/dashboard.component';
+import {MatDividerModule} from '@angular/material/divider';
+import { ProfileComponent } from './pages/profile/profile.component';
 
 
 
@@ -35,6 +42,11 @@ import { ModuloadministrativoComponent } from './pages/moduloadministrativo/modu
     HomeComponent,
     ListarclientesComponent,
     ModuloadministrativoComponent,
+    InvitadosComponent,
+    SlidebarComponent,
+    BienvenidoComponent,
+    DashboardComponent,
+    ProfileComponent,
     
     
     
@@ -52,7 +64,9 @@ import { ModuloadministrativoComponent } from './pages/moduloadministrativo/modu
     FormsModule,
     MatCardModule,
     MatIconModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatListModule,
+    MatDividerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

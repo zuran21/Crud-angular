@@ -1,5 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Subject } from 'rxjs/internal/Subject';
 import urlbase from './helper';
 
 @Injectable({
@@ -7,6 +8,7 @@ import urlbase from './helper';
 })
 export class LoginService {
 
+    public logginStatusSubject = new Subject<Boolean>();
   constructor(private httpClient: HttpClient ) { }
 
     public generarToken(datalogin:any){
@@ -46,7 +48,7 @@ export class LoginService {
   public logout(){
     localStorage.removeItem('token');
     localStorage.removeItem('user');
-    return null;
+    return true;
   }
   public isloggin(){
     let tokenStr = localStorage.getItem('token');

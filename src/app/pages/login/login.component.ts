@@ -38,12 +38,16 @@ export class LoginComponent implements OnInit {
           this.loginService.setuser(user);
           console.log(user);
 
-          if(this.loginService.getUseRol() == 'administrador'){
+          if(this.loginService.getUseRol() == 'administrador'){            
             this.router.navigate(['/moduloAdmin']);
+            this.loginService.logginStatusSubject.next(true);
           }else if(this.loginService.getUseRol() == 'Cliente'){
           this.router.navigate(["/listarClientes"]);
-        }
-        })
+          this.loginService.logginStatusSubject.next(true);
+        }else if(this.loginService.getUseRol() == 'invitado'){
+          this.router.navigate(["/invitados"]);
+          this.loginService.logginStatusSubject.next(true);
+      }})
       
       }
     )

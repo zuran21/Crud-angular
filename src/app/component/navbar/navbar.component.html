@@ -2,31 +2,50 @@
 <mat-toolbar color="purple">
 
 <a
-    routerLink=""
+    [routerLink]="'/'"
     mat-icon-button class="home"
     aria-label="Example home icon-button width menu icon"
  >   
     <mat-icon>home</mat-icon>
 </a>
     
-
-
     <span>Pokedex</span>
     <span class="example-spacer"></span>
 
-    <a  
-    routerLink="/login"
+    <a 
+     *ngIf = "isloginEst"
+    [routerLink]="'/login'"
     mat-icon-button class="example-icon favorite-icon"
     aria-label="Example  icon-button width heart icon" 
     >
         Iniciar Sesión
     </a>
     <a  
-    routerLink="/singup"
+    *ngIf = "isloginEst"
+    [routerLink]="'/singup'"
     mat-icon-button class="example-icon favorite-icon mr20 ml70"
     aria-label="Example  icon-button width heart icon" 
     >
         Registrar pokemon
+    </a>
+    <a  
+    *ngIf = "!isloginEst"
+    (click) = "logout()"
+    style = "margin-right:50px;"
+    mat-icon-button class="example-icon favorite-icon"
+    aria-label="Example  icon-button width heart icon" 
+    >
+        Cerrar Sesión
+    </a>
+
+    <a  
+    *ngIf = "!isloginEst"
+    style = "margin-right:10px;"
+    [routerLink] = "'/profile'"
+    mat-icon-button class="example-icon favorite-icon"
+    aria-label="Example  icon-button width heart icon" 
+    >
+        {{user.username}}
     </a>
 
 

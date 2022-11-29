@@ -40,6 +40,7 @@ export class SingupComponent implements OnInit {
       (data) =>{
         console.log(data);
         Swal.fire('Pokemon Registrado','Pokemon Guardado Exsitosamente','success')
+        return null;
       })
   }
 
