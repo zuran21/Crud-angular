@@ -1,50 +1,59 @@
-<div class="bootstrap-wrapper">
-    <div class="container">
-        <div class="row" style="margin: top 20px;">
-            <div class="col-md-6 offset-md-3">
-                <div class="container text-center">
-                   <img src="../../../assets/charizard.gif" width="80px" height="80px">
-                </div>
-                <h1 class="text-center">REGISTRATE AQUI</h1>
-                <form (ngSubmit)="formSubmit()">
-                    <mat-form-field class="full-width" appearance="outline">
-                        <mat-label>NOMBRE DE USUARIO</mat-label>
-                        <input required [(ngModel)] = "user.username" name = "username" matInput placeholder="DIGITE SU NOMBRE DE USUARIO" >
-                        <mat-hint>EL NOMBRE DEL USUARIO DEBE SER UNICO</mat-hint>
-                    </mat-form-field>
+                   <div class="container py-2">
+                    <div class="row">
+                        <div class="col-md-6 offset-md-3">
+                            <h1 class="text-center fs-3">REGISTRATE AQUI</h1>
+                            <figure class="text-center"><img  src="../../../assets/charizard.gif" width="80px" height="80px"></figure>
+                            <hr class="my-1">
+                            
+                            <form (ngSubmit)="formSubmit()">
+            
+                                <div class="form-floating mb-3">
+                                    <input type="username" class=" form-control rounded-4"  required [(ngModel)] = "user.username" name="username" placeholder="user name" >
+                                    <label for="floatingInput">Nombre de usuario</label>
+                                </div>
+            
+                                <div class="form-floating mb-3">
+                                    <input type="password" class=" form-control rounded-4"  required [(ngModel)] = "user.password" name="password" placeholder="password" >
+                                    <label for="floatingInput">Contraseña</label>
+                                </div>
+            
+            
+                                <div class="row g-0">
+                                    <div class="col-sm-6 col-md-5">
+                                        <div class="form-floating mb-3 ">
+                                            <input type="nombuser" class=" form-control rounded-4"  required [(ngModel)] = "user.nombuser" name="nombuser" placeholder="name" >
+                                            <label for="floatingInput">Nombre</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-6 ms-4">
+                                        <div class="form-floating mb-3">
+                                            <input type="apelliuser" class=" form-control rounded-4"  required [(ngModel)] = "user.apelliuser" name="apelliuser" placeholder="surname" >
+                                            <label for="floatingInput">Apellidos</label>
+                                        </div>
+                                    </div>
+                                  </div>
+            
+                                  <div class="form-floating mb-3">
+                                    <input type="emailuser" class=" form-control rounded-4"  required [(ngModel)] = "user.emailuser" name="emailuser" placeholder="example@gmail.com" >
+                                    <label for="floatingInput">Email</label>
+                                </div>
+            
+                                <div class="form-floating mb-3 ">
+                                    <input type="telefuser" class=" form-control rounded-4"  required [(ngModel)] = "user.telefuser" name="telefuser" placeholder="phone" >
+                                    <label for="floatingInput">Telefono</label>
+                                </div>
 
-                    <mat-form-field class="full-width" appearance="outline">
-                        <mat-label>CONTRASEÑA</mat-label>
-                        <input required [(ngModel)] = "user.password" name = "password" type="password" matInput placeholder="DIGITE SU CONTRASEÑA">
-                    </mat-form-field>
-
-                    <mat-form-field class="full-width" appearance="outline">
-                        <mat-label>NOMBRES</mat-label>
-                        <input required [(ngModel)] = "user.nombuser" name = "nombuser" matInput placeholder="DIGITE SUS NOMBRES">
-                    </mat-form-field>
-
-                    <mat-form-field class="full-width" appearance="outline">
-                        <mat-label>APELLIDOS</mat-label>
-                        <input required [(ngModel)] = "user.apelliuser" name = "apelliuser" matInput placeholder="DIGITE SUS APELLIDOS">
-                    </mat-form-field>
-
-                    <mat-form-field class="full-width" appearance="outline">
-                        <mat-label>EMAIL</mat-label>
-                        <input required [(ngModel)] = "user.emailuser" name = "emailuser" type = "email"matInput placeholder="DIGITE SU EMAIL">
-                    </mat-form-field>
-
-                    <mat-form-field class="full-width" appearance="outline">
-                        <mat-label>TELEFONO</mat-label>
-                        <input required [(ngModel)] = "user.telefuser" name = "telefuser" matInput placeholder="DIGITE SU TELEFONO">
-                    </mat-form-field>
-
-                    <div class="container text-center">
-                        <button mat-raised-button color="primary">Guardar</button>
-                        <button type="reset" style="margin-left:20px;" mat-raised-button color="accent">Limpiar</button>
+                                <button class="btn btn-danger mx-2 ">
+                                    <span class="spinner-border spinner-border-sm"></span>
+                                    Loading..
+                                  </button>
+            
+                                <div class="text-center">
+                                    <button type="button" class="btn btn-outline-dark ">Guardar</button>
+                                    <button type="reset" class="btn btn-outline-danger ms-5">Limpiar</button>
+                                </div>
+            
+                            </form>
+                        </div>
                     </div>
-                </form>
-            </div>
-        </div>
-    </div>
-    
-</div>
+                </div>

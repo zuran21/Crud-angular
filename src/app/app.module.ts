@@ -27,6 +27,12 @@ import { BienvenidoComponent } from './pages/admin/bienvenido/bienvenido.compone
 import { DashboardComponent } from './pages/admin/dashboard/dashboard.component';
 import {MatDividerModule} from '@angular/material/divider';
 import { ProfileComponent } from './pages/profile/profile.component';
+import { CategoriaComponent } from './pages/admin/categoria/categoria.component';
+import { AgregarCategoriaComponent } from './pages/admin/agregar-categoria/agregar-categoria.component';
+import { ExamenComponent } from './pages/admin/examen/examen.component';
+import { AgregarExamenComponent } from './pages/admin/agregar-examen/agregar-examen.component';
+import { PreguntaComponent } from './pages/admin/pregunta/pregunta.component';
+import { AgregarPreguntaComponent } from './pages/admin/agregar-pregunta/agregar-pregunta.component';
 
 
 
@@ -47,6 +53,12 @@ import { ProfileComponent } from './pages/profile/profile.component';
     BienvenidoComponent,
     DashboardComponent,
     ProfileComponent,
+    CategoriaComponent,
+    AgregarCategoriaComponent,
+    ExamenComponent,
+    AgregarExamenComponent,
+    PreguntaComponent,
+    AgregarPreguntaComponent,
     
     
     
