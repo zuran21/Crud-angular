@@ -33,6 +33,8 @@ import { ExamenComponent } from './pages/admin/examen/examen.component';
 import { AgregarExamenComponent } from './pages/admin/agregar-examen/agregar-examen.component';
 import { PreguntaComponent } from './pages/admin/pregunta/pregunta.component';
 import { AgregarPreguntaComponent } from './pages/admin/agregar-pregunta/agregar-pregunta.component';
+import {MatRadioModule} from '@angular/material/radio';
+import {MatSelectModule} from '@angular/material/select';
 
 
 
@@ -78,7 +80,9 @@ import { AgregarPreguntaComponent } from './pages/admin/agregar-pregunta/agregar
     MatIconModule,
     MatSnackBarModule,
     MatListModule,
-    MatDividerModule
+    MatDividerModule,
+    MatRadioModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]
