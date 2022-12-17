@@ -8,16 +8,16 @@ import { CategoriaService } from 'src/app/service/categoria.service';
 })
 export class CategoriaComponent implements OnInit {
 
-  categoria:any []
+  categorias:any = []
 
-  constructor(private catservise:CategoriaService) { }
+  constructor(private catservice:CategoriaService) { }
 
-  ngOnInit(): void { 
-    this.catservise.listarCategoria().subscribe(
+  ngOnInit(): void {
+    this.catservice.listarCategoria().subscribe(
       (dato:any) => {
-        this.categoria = dato;
-      })
-
+        this.categorias = dato;
+        console.log(this.categorias);
+      });
   }
-  
+
 }

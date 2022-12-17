@@ -17,8 +17,5 @@ export class ExamenComponent implements OnInit {
         this.examenes=dato;
       }
     )
-  
   }
-
-  
 }

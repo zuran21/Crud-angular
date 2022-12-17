@@ -1,0 +1,60 @@
+<div class="container">
+    <h1 class="text-center">Paginas de Pokemon con Cards de Bootstrap 5</h1>
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="card">
+          <img class="card-img-top" src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png" alt="Pikachu" />
+          <div class="card-body">
+            <h5 class="card-title">Pikachu</h5>
+            <p class="card-text">
+              Es uno de los pokemones más conocidos de la franquicia Pokémon.
+            </p>
+            <a href="#" class="btn btn-primary">Ver más</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="card">
+          <img class="card-img-top" src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png" alt="Charizard" />
+          <div class="card-body">
+            <h5 class="card-title">Charizard</h5>
+            <p class="card-text">
+              Es un Pokémon de tipo fuego/volador introducido en la primera generación.
+            </p>
+            <a href="#" class="btn btn-primary">Ver más</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="card">
+          <img class="card-img-top" src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png" alt="Blastoise" />
+          <div class="card-body">
+            <h5 class="card-title">Blastoise</h5>
+            <p class="card-text">
+              Es un Pokémon de tipo agua introducido en la primera generación.
+            </p>
+            <a href="#" class="btn btn-primary">Ver más</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $('.card').hover(
+        function () {
+          $(this).animate({
+            marginTop: "-=1%"
+          }, 200);
+        },
+        function () {
+          $(this).animate({
+            marginTop: "0%"
+          }, 200);
+        }
+      );
+    });
+  </script>

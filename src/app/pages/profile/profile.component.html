@@ -1,13 +1,16 @@
-<mat-card style="margin-left:20px;">
-    <h1>Detalle del entrenador</h1>
-    <div class="boostrap-wrapper">
-        <div class="container-fluid">
-            <div class="text-center">
-                <img src="../../../../assets/pokelogo.gif" 
-                alt=""
-                class = "profile-image">
-
-                <h1>{{user.nombuser}} {{user.apelliuser}}</h1>
+<mat-card style="margin-left: 10px;">
+    <h1>Detalle del Perfil</h1>
+    <mat-card-content>
+        <div class="bootstrap-wrapper">
+            <div class="container">
+                <div class="text-center">
+                    <img
+                        src="https://www.unmc.edu/cihc/_images/faculty/default.jpg"
+                        alt=""
+                        class="profile-image"
+                    >
+                    <h1>{{user.nombuser}} {{user.apelliuser}} </h1>
+                </div>
                 <div class="row">
                     <div class="col-md-10 offset-md-1">
                         <table class="table text-center">
@@ -25,15 +28,12 @@
                             </tr>
                         </table>
                     </div>
-                  
                 </div>
             </div>
-    
         </div>
-        <mat-card-actions style="text-align:center;">
+        <mat-card-actions class="text-center">
             <button mat-raised-button color="primary">Actualizar</button>
             <button mat-raised-button color="accent">Compartir</button>
         </mat-card-actions>
-    </div>
-    
+    </mat-card-content>
 </mat-card>

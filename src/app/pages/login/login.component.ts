@@ -44,10 +44,11 @@ export class LoginComponent implements OnInit {
           }else if(this.loginService.getUseRol() == 'Cliente'){
           this.router.navigate(["/listarClientes"]);
           this.loginService.logginStatusSubject.next(true);
-        }else if(this.loginService.getUseRol() == 'invitado'){
-          this.router.navigate(["/invitados"]);
+        }else if(this.loginService.getUseRol() == 'Alumno'){
+          this.router.navigate(["/alumnos"]);
           this.loginService.logginStatusSubject.next(true);
-      }})
+      }
+    })
       
       }
     )

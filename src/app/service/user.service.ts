@@ -10,6 +10,6 @@ export class UserService {
   constructor(private httpClient: HttpClient) { }
 
   public insertarusuario (user:any){
-    return this.httpClient.post(`${urlbase}/usuario/registrarUsuario`,user);
+    return this.httpClient.post(`${urlbase}/usuario/registrarUsuario`, user);
   }
 }

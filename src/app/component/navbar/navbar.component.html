@@ -1,47 +1,123 @@
-<mat-toolbar color="purple">
+<!-- Main Wrapper -->
+<div class="main-wrapper">
+		
+    <!-- Header -->
+    <div class="header">
+    
+        <!-- Logo -->
+        <div class="header-left">
+            <a [routerLink]="'/'" class="logo">
+                <img src="assets/Pokeball-PNG-Photos.png" width="40" height="40" alt="">
+            </a>
+        </div>
+        <!-- /Logo -->
+        
+        <a id="toggle_btn" href="javascript:void(0);">
+            <span class="bar-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </span>
+        </a>
+        
+        <!-- Header Title -->
+        <div class="page-title-box">
+            <h3>Registro Pokedex</h3>
+        </div>
+        <!-- /Header Title -->
+        
+        <a id="mobile_btn" class="mobile_btn" href="#sidebar"><i class="fa fa-bars"></i></a>
+        
+                <!-- Header Menu -->
+                <ul class="nav user-menu">
+                
+                  <!-- Search -->
+                  <li class="nav-item">
+                      <div class="top-nav-search">
+                          <a href="javascript:void(0);" class="responsive-search">
+                              <i class="fa fa-search"></i>
+                         </a>
+                          <form action="search.html">
+                              <input class="form-control" type="text" placeholder="Search here">
+                              <button class="btn" type="submit"><i class="fa fa-search"></i></button>
+                          </form>
+                      </div>
+                  </li>
+                  <!-- /Search -->
+                    <!--iniciarSesion-->
+                    <li class="nav-item dropdown has-arrow flag-nav">
+						<a class="nav-link "
+                        *ngIf = "isloginEst" [routerLink]="'/login'"
+                         href="#" role="button">
+							 <span>Iniciar Sesión</span>
+                    </a>
 
-    <a
-        [routerLink]="'/'"
-        mat-icon-button class="home"
-        aria-label="Example home icon-button width menu icon"
-     >
-        <mat-icon>home</mat-icon>
-    </a>
-        <span >Inicio</span>
-        <span class="example-spacer"></span>
+					</li>
+                    <li class="nav-item dropdown has-arrow flag-nav">
+                    <a class="nav-link"
+                    *ngIf = "isloginEst"
+                    [routerLink]="'/singup'"
+                    role="button">
+                        Registrarse
+                    </a>
+                    </li>
+                    
+                  <li class="nav-item dropdown has-arrow main-drop">
+                    
+                      <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
+                          <span class="user-img"><img src="../../../assets/img/profiles/ashh.jpg" alt="">
+                          <span class="status online"></span></span>
+                         
+                      </a>
+                      
+                      <div class="dropdown-menu">
+                        <a
+                        *ngIf = "isloginEst"
+                        [routerLink]="'/singup'"
+                        mat-icon-button class="example-icon favorite-icon mr20 ml70"
+                        aria-label="Example  icon-button width heart icon">
+                            Registrarse
+                        </a>
+                          <a
+                          *ngIf = "!isloginEst"
+                          style = "margin-right:80px;"
+                          [routerLink] = "'/profile'"
+                          mat-icon-button class="example-icon favorite-icon"
+                          aria-label="Example  icon-button width heart icon">
+                              {{user.username}}
+                          </a>
+                          <a
+                          *ngIf = "!isloginEst" style = "margin-right:90px;"
+                          mat-icon-button class="example-icon favorite-icon"
+                          aria-label="Example  icon-button width heart icon">
+                              Settings
+                          </a>
+                          <a
+                          *ngIf = "!isloginEst"
+                          (click) = "logout()"
+                          style = "margin-right:90px;"
+                          mat-icon-button class="example-icon favorite-icon"
+                          aria-label="Example  icon-button width heart icon">
+                              Cerrar Sesión
+                          </a>
+                      </div>
+                  </li>
+              </ul>
+              <!-- /Header Menu -->
+        
+        <!-- Mobile Menu -->
+        <div class="dropdown mobile-user-menu">
+            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
+            <div class="dropdown-menu dropdown-menu-right">
+                <a class="dropdown-item" href="profile.html">My Profile</a>
+                <a class="dropdown-item" href="settings.html">Settings</a>
+                <a class="dropdown-item" href="login.html">Logout</a>
+            </div>
+        </div>
+        <!-- /Mobile Menu -->
+        
+    </div>
+    <!-- /Header -->
     
-        <a
-        class="text-dark"
-         *ngIf = "isloginEst"
-        [routerLink]="'/login'"
-        mat-icon-button class="example-icon favorite-icon"
-        aria-label="Example  icon-button width heart icon">
-            Iniciar Sesión
-        </a>
-        <a
-        *ngIf = "isloginEst"
-        [routerLink]="'/singup'"
-        mat-icon-button class="example-icon favorite-icon mr20 ml70"
-        aria-label="Example  icon-button width heart icon">
-            Registrarse
-        </a>
-        <a
-        *ngIf = "!isloginEst"
-        (click) = "logout()"
-        style = "margin-right:90px;"
-        mat-icon-button class="example-icon favorite-icon"
-        aria-label="Example  icon-button width heart icon">
-            Cerrar Sesión
-        </a>
-    
-        <a
-        *ngIf = "!isloginEst"
-        style = "margin-right:80px;"
-        [routerLink] = "'/profile'"
-        mat-icon-button class="example-icon favorite-icon"
-        aria-label="Example  icon-button width heart icon">
-            {{user.username}}
-        </a>
-    
-    
-    </mat-toolbar>
+
+</div>

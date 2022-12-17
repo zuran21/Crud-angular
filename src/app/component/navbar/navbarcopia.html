@@ -1,0 +1,47 @@
+<mat-toolbar color="purple">
+
+    <a
+        [routerLink]="'/'"
+        mat-icon-button class="home"
+        aria-label="Example home icon-button width menu icon"
+     >
+        <mat-icon>home</mat-icon>
+    </a>
+        <span >Inicio</span>
+        <span class="example-spacer"></span>
+    
+        <a
+        class="text-dark"
+         *ngIf = "isloginEst"
+        [routerLink]="'/login'"
+        mat-icon-button class="example-icon favorite-icon"
+        aria-label="Example  icon-button width heart icon">
+            Iniciar Sesión
+        </a>
+        <a
+        *ngIf = "isloginEst"
+        [routerLink]="'/singup'"
+        mat-icon-button class="example-icon favorite-icon mr20 ml70"
+        aria-label="Example  icon-button width heart icon">
+            Registrarse
+        </a>
+        <a
+        *ngIf = "!isloginEst"
+        (click) = "logout()"
+        style = "margin-right:90px;"
+        mat-icon-button class="example-icon favorite-icon"
+        aria-label="Example  icon-button width heart icon">
+            Cerrar Sesión
+        </a>
+    
+        <a
+        *ngIf = "!isloginEst"
+        style = "margin-right:80px;"
+        [routerLink] = "'/profile'"
+        mat-icon-button class="example-icon favorite-icon"
+        aria-label="Example  icon-button width heart icon">
+            {{user.username}}
+        </a>
+    
+    
+    </mat-toolbar>

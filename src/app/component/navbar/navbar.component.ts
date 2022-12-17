@@ -14,21 +14,23 @@ export class NavbarComponent implements OnInit {
 
   constructor(private login:LoginService) { }
 
-  ngOnInit(): void {
+   ngOnInit(): void {
     
     this.isloginEst = this.login.isloggin();
     this.user = this.login.getuser();
-
+    console.log(this.isloginEst);
+    console.log(this.user);
     this.login.logginStatusSubject.asObservable().subscribe(data =>{
       this.isloginEst = this.login.isloggin();
       this.user = this.login.getuser();
-    console.log(this.isloginEst);
+      console.log(this.isloginEst);
     })
-    
   }
 
   public logout(){
     this.login.logout();
     window.location.reload();
   }
+
+
 }
